@@ -53,58 +53,14 @@ THEN that book is deleted from my saved books list
 WHEN I click on the Logout button  
 THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button
 
-## Back-End Specifications
-<!-- * server.js: Implement the Apollo Server and apply it to the Express server as middleware. -->
-
-* auth.js: Update the auth middleware function to work with the GraphQL API.
-
-### Schemas directory:
-<!-- * index.js: Export your typeDefs and resolvers. -->
-<!-- * resolvers.js: Define the query and mutation functionality to work with the Mongoose models. -->
-* typeDefs.js: Define the necessary Query and Mutation types:
-  <!-- * Query type:
-    * me: Which returns a User type. -->
-
-  * Mutation type:
-    <!-- * login: Accepts an email and password as parameters; returns an Auth type. -->
-    <!-- * addUser: Accepts a username, email, and password as parameters; returns an Auth type. -->
-    * saveBook: Accepts a book 
-      <!-- * author's array
-      * description
-      * title
-      * bookId -->
-      * image
-      <!-- * link -->
-      <!-- as parameters; returns a User type. (Look into creating what's known as an input type to handle all of these parameters!) -->
-    <!-- * removeBook: Accepts a book's bookId as a parameter; returns a User type. -->
-
-  <!-- * User type:
-    * _id
-    * username
-    * email
-    * bookCount
-    * savedBooks (This will be an array of the Book type.) -->
-
-  * Book type:
-    <!-- * bookId (Not the _id, but the book's id value returned from Google's Book API.)
-    * authors (An array of strings, as there may be more than one author.)
-    * description
-    * title -->
-    * image
-    <!-- * link -->
-
-  <!-- * Auth type:
-    * token
-    * user (References the User type.) -->
-
 ## Front-End Specifications
-* queries.js: This will hold the query GET_ME, which will execute the me query set up using Apollo Server.
+<!-- * queries.js: This will hold the query GET_ME, which will execute the me query set up using Apollo Server. -->
 
-* mutations.js:
+<!-- * mutations.js:
   * LOGIN_USER will execute the loginUser mutation set up using Apollo Server.
   * ADD_USER will execute the addUser mutation.
   * SAVE_BOOK will execute the saveBook mutation.
-  * REMOVE_BOOK will execute the removeBook mutation.
+  * REMOVE_BOOK will execute the removeBook mutation. -->
 
 * App.js: Create an Apollo Provider to make every request work with the Apollo server.
 
