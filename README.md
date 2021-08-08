@@ -62,11 +62,11 @@ THEN I am logged out of the site and presented with a menu with the options Sear
   * SAVE_BOOK will execute the saveBook mutation.
   * REMOVE_BOOK will execute the removeBook mutation. -->
 
-* App.js: Create an Apollo Provider to make every request work with the Apollo server.
+<!-- * App.js: Create an Apollo Provider to make every request work with the Apollo server. -->
 
-* SearchBooks.js:
+<!-- * SearchBooks.js:
   * Use the Apollo useMutation() Hook to execute the SAVE_BOOK mutation in the handleSaveBook() function instead of the saveBook() function imported from the API file.
-  * Make sure you keep the logic for saving the book's ID to state in the try...catch block!
+  * Make sure you keep the logic for saving the book's ID to state in the try...catch block! -->
 
 * SavedBooks.js:
   * Remove the useEffect() Hook that sets the state for UserData.
