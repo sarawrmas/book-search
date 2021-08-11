@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
-import { GET_ME } from '../utils/queries';
-import { REMOVE_BOOK } from '../utils/mutations';
-import { useQuery, useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
+import { useQuery, useMutation } from '@apollo/client';
+import { REMOVE_BOOK } from '../utils/mutations';
+import { GET_ME } from '../utils/queries';
 
 const SavedBooks = () => {
   const [removeBook] = useMutation(REMOVE_BOOK);
-
   const { loading, data: userData } = useQuery(GET_ME);
 
   const handleDeleteBook = async (bookId) => {
@@ -21,7 +20,7 @@ const SavedBooks = () => {
     try {
       const { data: updatedUser } = await removeBook({
         variables: { bookId }
-      })
+      });
 
       removeBookId(bookId);
     } catch (err) {
