@@ -16,7 +16,8 @@ This application was built using the MERN stack:
 * Express.js
 * React.js
 * Node.js
-With additional components:
+
+With additional tools:
 * JavaScript
 * GraphQL
 * Mongoose
