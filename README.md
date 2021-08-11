@@ -8,7 +8,7 @@
 * [Credits](#credits)
 
 ## Deployed
-Access the website [here](https://sarawrmas.github.io/book-search)
+Access the website [here](https://afternoon-bayou-39192.herokuapp.com/)
 
 ## Technologies
 This application was built using the MERN stack:
