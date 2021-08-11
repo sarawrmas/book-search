@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
@@ -18,7 +18,7 @@ const SavedBooks = () => {
     }
 
     try {
-      const { data: updatedUser } = await removeBook({
+      await removeBook({
         variables: { bookId }
       });
 
@@ -36,7 +36,7 @@ const SavedBooks = () => {
     <>
       <Jumbotron fluid className='text-light bg-dark'>
         <Container>
-          <h1>Viewing saved books!</h1>
+          <h1>Wishlist</h1>
         </Container>
       </Jumbotron>
       <Container>
@@ -54,9 +54,9 @@ const SavedBooks = () => {
                   <Card.Title>{book.title}</Card.Title>
                   <p className='small'>Authors: {book.authors}</p>
                   <Card.Text>{book.description}</Card.Text>
-                  <Card.Text><a href={book.link} target='_blank'>View Book</a></Card.Text>
+                  <Card.Text><a href={book.link} target='_blank'>See More...</a></Card.Text>
                   <Button className='btn-block btn-danger' onClick={() => handleDeleteBook(book.bookId)}>
-                    Delete this Book!
+                    Remove from Wishlist
                   </Button>
                 </Card.Body>
               </Card>
